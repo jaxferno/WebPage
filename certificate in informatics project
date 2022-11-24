@@ -1,0 +1,1977 @@
+
+
+/*    CSS     */
+
+*{
+    margin:0;
+    padding:0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+/*   Main Page  */
+.Pagina {
+    background-image: linear-gradient(rgba(30, 30, 30, 0.63),rgba(30, 30, 30, 0.5)),
+    url('remy\ martin2.jpg');
+    height:200vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+}
+@media (max-width:768px){
+    .logo {
+        width: max(30vw);
+        margin-left:auto;
+        margin-right:auto;
+        display:block;
+    }
+
+    nav{
+        text-align:center;
+    }
+    
+    .dropdown{
+        width:29%;
+    }
+
+    .text{
+        font-size:50%;
+        margin-right:4%;
+     }
+
+    .Bottlings .dropdown-content{
+        width:338%;
+        left:-15%;
+        margin-right:5%;
+        padding-bottom:3%;
+        text-align:left;
+    }
+    .Bottlings .dropdown-content a{
+        padding-top:0.5rem;
+        padding-left:2%;
+    }
+    .history .dropdown-content{
+        position:absolute;
+        width:340%;
+        left:-123%;
+        color:white;
+        padding:2% 3% 2% 3%;
+    }
+    .history .dropdown-content p{
+        font-size:0.8em;
+        padding:4%;
+    }
+    .Pricing .dropdown-content{
+        width:338%;
+        height:700%;
+        left:-229%;
+        margin-left:5%;
+        text-align:right; 
+    }
+
+    .Pricing .dropdown-content a{
+        padding-right:2%;
+    }
+
+    .dropdown-content{
+        margin-top:5%;
+        font-size:0.6rem;
+        border-radius:2%;
+    }
+   
+    .dropdown-content a {
+        padding-top:1%;
+    }
+    
+}
+@media (min-width:769px){
+
+    .logo{
+        width:max(15vw);
+        float:left;
+        margin-top:1%;
+    }
+
+    nav{
+       position:relative;
+       text-align:right;
+       top:4%;
+    }
+
+    .dropdown {
+        width:9%;
+        margin-right:4%;
+    }
+
+    .text{
+        font-size:1vw;
+    }
+
+    button{
+        cursor:pointer;
+        font-size:1vw;
+    }
+
+    .Bottlings .dropdown-content{
+        width:300%;
+        left:-115%;
+        text-align: left;
+    }
+
+    .Bottlings .dropdown-content a{
+        font-size:0.9vw;
+        padding-top:2%;
+    }
+
+    .history .dropdown-content{
+        width:300%;
+        left:-110%;
+    }
+
+    .history .dropdown-content p{
+        font-size:0.9vw;
+        color:white;
+    }
+
+    .Pricing .dropdown-content{
+        width:300%;
+        left:-180%;
+        text-align:right;
+    }
+    .Pricing .dropdown-content a{
+        font-size:0.9vw;
+        padding-right:3%;
+    }
+
+    .dropdown-content {
+        text-align:center;
+        width:100%;
+        left:-9%;
+        right:0;
+        padding:6% 10% 6% 10%;
+    }
+
+
+    .dropdown button{
+        width:100%;
+    }
+
+    .dropdown-content a {
+        padding:4% 1%;
+   }
+}
+.Bottlings .dropdown-content,.Pricing .dropdown-content{
+    height:900%;
+}
+.dropdown{
+    position:relative; 
+    display:inline-block;
+}
+.dropdown-content{
+    display:none;
+    overflow:auto;
+    position:absolute;
+    padding-top:10%;
+    box-shadow:0px 10px 10px 0px rgba(0, 0, 0, 0.87);
+}
+.dropdown:hover .dropdown-content {
+    display:block;
+}
+.dropdown-content a:hover {
+    color:#cccccc;
+    background-image:linear-gradient(145deg,#031014,#0F2027,#203A43,#2C5364);
+}
+.dropdown-content a{
+    background-size:200%;
+    background-position:left;
+    transition:background-position 2s; 
+    display:block;
+    color:#cccccc;
+    text-decoration:none;
+}
+
+.dropdown-content a::after{
+    content:"";
+    display: block;
+    width:0;
+    height: 2px;
+    background:#cccccc;
+    transition: width 1s;
+}
+
+.dropdown-content a:hover::after {
+    width: 100%;
+    margin-top: 1%;
+}
+.Pricing .dropdown-content a:hover,
+.Pricing .dropdown-content a:focus{
+    background-position:right;
+}
+.Bottlings .dropdown-content a{
+    background-position:right;
+}
+.Bottlings .dropdown-content a:hover,
+.Bottlings .dropdown-content a:focus{
+    background-position:left;
+}
+.dropdown button {
+    border:none;
+    background-image:linear-gradient(145deg,#091114,#0F2027,#203A43,#2C5364);
+    box-shadow:0px 5px 10px 0px #707070;
+    padding:3% 5% 3% 5%;
+    border-radius: 0.7em;
+    color:#cccccc;
+    background-size:200%;
+    background-position:left;
+    transition:background-position 1.3s; 
+}
+.dropdown button:hover,
+.dropdown button:focus{
+    background-position:right;
+}
+.text{
+    border-bottom:0.5em solid transparent ;
+    border-left:0.5em solid transparent;
+    border-image:linear-gradient(180deg,#091114,#0F2027,#203A43,#2C5364);
+    border-image-slice:1;
+    color:white;
+    position:absolute;
+    text-align:left;
+    bottom:8%;
+    left:3%;
+    padding-left:0.5%;
+    animation: ani 3s ease-in-out infinite;
+}
+@keyframes ani{
+    0%{
+        border-image:linear-gradient(180deg,#091114,#0F2027,#203A43,#2C5364);
+        border-image-slice:1;
+    }
+    25%{
+        border-image:linear-gradient(90deg,#0F2027,#2C5364);
+        border-image-slice:1;
+    }
+    50%{
+        border-image:linear-gradient(45deg,#2C5364);
+        border-image-slice:1;
+    }
+    75%{
+        border-image:linear-gradient(90deg,#0F2027,#2C5364);
+        border-image-slice:1;
+    }
+    100%{
+        border-image:linear-gradient(180deg,#091114,#0F2027,#203A43,#2C5364);
+        border-image-slice:1;
+    }
+}
+.text a{
+    color:rgb(255, 255, 255);
+    text-decoration:none;
+}
+
+.text p strong{
+    color:rgb(255, 255, 255);
+}
+
+.Pricing ,.dropdown-content::-webkit-scrollbar, .Bottlings ,.dropdown-content::-webkit-scrollbar{
+    direction:rtl;
+    border-bottom-left-radius:5px;
+    border-bottom-right-radius:5px;
+    
+}
+
+::-webkit-scrollbar{
+    width:0.5em;
+    background:black;
+}
+ 
+::-webkit-scrollbar-track{
+    border-radius:2em;
+    background:rgba(0,0,0);
+}
+
+::-webkit-scrollbar-thumb{
+    background:linear-gradient(45deg,#2C5364,#203A43,#0F2027,#000000);
+    border-radius:2em;
+}
+
+/*   Remy-Martin-Louis-XIII.html   */
+
+
+.Fundal-1{
+    background-image:linear-gradient(rgba(99, 55, 5, 0.356),rgba(122, 39, 6, 0.13)),
+    url('LouisXIII.jpg');
+    height:100vh;
+    width: 100%;
+    background-size:cover;
+    background-position: center;
+}
+
+.Descriere1{
+    position: relative;
+    text-align: center;
+    width: 27%;
+    top:30%;
+    padding:1%;
+    border-radius: 5%;
+    margin-left: 5.8%;
+    display: inline-block;
+    box-shadow: 0 15px 15px 10px #160000;
+    font-size: 1vw;
+}
+
+.Descriere1 h2{
+    display:inline-block;
+}
+
+.box1 {
+    position: relative;
+    overflow: auto;
+    width: 100%;
+    height:35ex;
+}
+
+.Descriere1 p{
+    padding-top:2%;
+}
+
+.Descriere1 h2,p{
+    color:white;
+}
+
+.note{
+    display: inline-block;
+    position: absolute;
+    text-align: center;
+    right: 20%;
+    top:30%;
+    box-shadow: 0 15px 15px 10px #160000;
+    padding: 1.5% .8% 0 .8%;
+    border-radius: 5%;
+}
+
+.note h2{
+    color:white;
+    font-size: 1vw;
+    margin-bottom:-20%;
+    text-decoration: underline;
+}
+
+.dropdown-louisXIII{
+    margin:35% 0;
+    cursor: pointer;
+}
+
+.dropdown-content-louisXIII{
+    display:none;
+    position:absolute;
+    text-align:bottom;
+    box-shadow: 0 15px 15px 5px #160000;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.507),rgba(0, 0, 0, 0.486))
+}
+
+.miros .dropdown-content-louisXIII {
+    top:40%;
+}
+
+.gust .dropdown-content-louisXIII{
+    top:60%;
+}
+
+.finish .dropdown-content-louisXIII{
+    top:85%;
+}
+
+.dropdown-louisXIII button {
+    background-image: linear-gradient(45deg,#020103,#552012,#923b22,#cc5333);
+    background-size:250%;
+    background-position:left;
+    padding:5% 20% 5% 20%;   
+    transition:background-position 1s; 
+}
+.dropdown-louisXIII button:hover,
+.dropdown-louisXIII button:focus{
+    background-position:right;
+}
+
+button, input[type="submit"], input[type="reset"] {
+    background:none;
+    color:white;
+	border:none;
+	
+}
+.dropdown-louisXIII:hover .dropdown-content-louisXIII {
+    display:inline-block;
+}
+.dropdown-content-louisXIII p{
+    font-size: 1vw;
+    padding:2%;
+}
+
+@media (max-width:768px){
+    .Descriere1{
+        top:8%;
+        overflow:visible;
+        width: 80%;
+        height:32%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .box1{
+        font-size: .6rem;
+    }
+    .box1 p{
+        margin-right: 2%;
+    }
+    .note{
+        width:5rem;
+        left:10%;
+        top:45%;
+    }
+    .note h2{
+        font-size: .6rem;
+        margin-bottom:10%;
+        text-decoration: underline;
+    }
+    .dropdown-louisXIII button{
+        font-size: .7rem;
+    }
+    .dropdown-content-louisXIII{
+        width:200%;
+        left:110%;
+    }
+    .dropdown-content-louisXIII p{
+        font-size:.6rem;
+    }
+    .miros .dropdown-content-louisXIII {
+        top:20%;
+    }
+    
+    .gust .dropdown-content-louisXIII{
+        top:40%;
+    }
+    
+    .finish .dropdown-content-louisXIII{
+        top:72%;
+    }
+    .Descriere1 .box1::-webkit-scrollbar{
+        width: 4px;
+    }
+    .Descriere1 .box1::-webkit-scrollbar-thumb{
+        background:linear-gradient(45deg,#ff8a6a,#853721,#552012,#020103,#000);
+        border-radius:2em;
+    }
+}
+@media (min-width:769px){
+    .dropdown-content-louisXIII{
+        width:290%;
+        right: 0;
+        transform: translateY(-50%);
+        margin-right:120%;
+    }
+    .Descriere1 .box1::-webkit-scrollbar{
+        width: 6px;
+    }
+    .Descriere1 .box1::-webkit-scrollbar-thumb{
+        background:linear-gradient(45deg,#ff8a6a,#853721,#552012,#020103,#000);
+        border-radius:2em;
+    }
+}
+/* Rémy Martin Louis XIII Black Pearl 40° 70C */ 
+
+
+.Fundal-2 {
+    background-image:linear-gradient(rgba(0, 0, 0, 0.1),rgba(0, 0, 0, 0.1)),
+    url('blackpearl.jpg');
+    height:100vh;
+    width: 100%;
+    background-size:cover;
+    background-position: center;
+}
+@keyframes animation{
+    0%{
+        border-left:4px solid rgb(255, 255, 255);
+        border-top:1px solid rgb(221, 221, 221);
+        border-bottom:1px solid rgb(221, 221, 221);
+    }
+    50%{
+        border-left:4px solid rgb(31, 31, 31);
+        border-top:1px solid rgb(31, 31, 31);
+        border-bottom:1px solid rgb(31, 31, 31);
+    }
+    100%{
+        border-left:4px solid rgb(255, 255, 255);
+        border-top:1px solid rgb(221, 221, 221);
+        border-bottom:1px solid rgb(221, 221, 221);
+    }
+}
+.Descriere2{
+    position: relative;
+    text-align: left;
+    width: 34%;
+    margin-left:5%;
+    border-radius: 5%;
+    top:12%;
+    border-left:4px solid rgb(221, 221, 221);
+    border-top:1px solid rgb(221, 221, 221);
+    border-bottom:1px solid rgb(221, 221, 221);
+    background-color:rgba(41, 41, 41, 0.377);
+    padding:2%;
+    animation:animation 8s infinite;
+}
+.box2 p{
+    font-size:1vw;
+}
+.box2 a{
+    color:rgb(184, 184, 184);
+}
+.box2 a img{
+    display: none;
+    position: absolute;
+    left:110%;
+    top:15%;
+    box-shadow: 0 5px 15px 5px rgb(221, 221, 221);
+}
+.box2 a:hover img{
+    display: block;
+}
+@media (max-width:768px){
+    .box2 p{
+        font-size: 1.7vw;
+    }
+    .box2 a img{
+        width:60%;
+        left:105%;
+        top:35%;
+    }
+    .Descriere2{
+        border-left:2px solid rgb(221, 221, 221);
+        width:50%;
+    }
+}
+
+/* Rémy Martin Louis XIII Time Collection */
+
+.Fundal-3 {
+    background-image:linear-gradient(rgba(99, 55, 5, 0.5),rgba(122, 39, 6, 0.5)),
+    url('time-collection.jpg');
+    height:100vh;
+    width: 100%;
+    background-size:cover;
+    background-position: center;
+}
+
+.Descriere3 , .arrow-text{
+    font-size: 1vw;
+    position: relative;
+    border:3px solid rgba(99, 55, 5);
+    width:50%;
+    text-align:center;
+    background-color:rgba(99, 55, 5, 0.3);
+    animation:f 10s infinite;
+    border-bottom: hidden;
+    padding:2%;
+    left:2%;
+    top:2%;
+    border-radius: 10%;
+    border-top:none;
+
+}
+@keyframes f{
+    0%{
+        background-color:rgba(31, 31, 31, 0.3);
+    }
+    25%{
+        background-color:rgba(85, 85, 85, 0.3);
+    }
+    50%{
+        background-color:rgba(170, 170, 170, 0.3);
+    }
+    75%{
+        background-color:rgba(85, 85, 85, 0.3);
+    }
+    100%{
+        background-color:rgba(31, 31, 31, 0.3);
+    }
+}
+.sageata img{
+    width:15%;
+    position:relative;
+    left:45%;
+    margin-top:1%;
+}
+
+.arrow-text{
+   width:30%;
+   float:right;
+   margin-right:10%;
+   margin-top:-13%;
+}
+.coin img{
+    width: 20%;
+    position: absolute;
+    top:10%;
+    right:10%;
+    box-shadow: 0 5px 15px 5px rgb(51, 31, 2);
+}
+.video-player{
+    width: 30%;
+    position: absolute;
+    overflow: hidden;
+    top: 55%;
+    left:10%;
+}
+
+@media (max-width:766px){
+    .Descriere3 , .arrow-text{
+        font-size: 1.5vw;
+    }
+    .sageata img{
+        margin-top: 5%;
+    }
+    .arrow-text{
+        margin-top:-24%;
+    }
+    .coin img{
+        width:35%;
+        bottom:10%;
+        right:10%;
+    }
+    .video-player{
+        width:45%;
+        position: absolute;
+        overflow: hidden;
+        top:65%;
+        left:5%;
+    }
+}
+
+/* Rémy-Martin-250th-Anniversary */
+.Fundal-4{
+    background-image:
+    url('white-bk.png');
+    width: 100%;
+    height:100vh;
+    background-size:cover;
+    background-position: center;
+    overflow: hidden;
+}
+.Descriere4 img{
+    width: 20%;
+    box-shadow:5px 10px 25px 10px rgb(230, 230, 230);
+    position: absolute;
+    top:25%;
+    left:8%;
+}
+.Descriere4 h3{
+    margin-bottom: 1%;
+    text-align: center;
+    margin-top:2%;
+    text-decoration: underline;
+}
+.Descriere4 p{
+    color:black;
+    width: 40%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    text-shadow: -18px 23px 3px rgba(32, 32, 32, 0.39);
+    border:4px solid black;
+    border-top:none;
+    border-bottom:none;
+    border-radius: 10%;
+    padding:1%;
+    font-size: 1vw;
+    animation:b4 2s infinite;
+}
+.prezentare-250 p{
+    position: absolute;
+    right:0;
+    bottom:40%;
+    margin-right:1%;
+    text-align: right;
+    border-right:4px solid black;
+    border-left:none;  
+}
+@keyframes  b4{
+    0%{
+        border-color:black;
+    }
+    50%{
+        border-color: rgb(85, 85, 85);
+    }
+    100%{
+        border-color:black;
+    }
+}
+.prezentare-250 a{
+    color:rgba(0, 0, 0);
+}
+.prezentare-250 p img{
+    display: none;
+    position:absolute;
+    left:-60%;
+    width:50%;
+    top:0;
+    box-shadow: 0 10px 15px 10px rgb(235, 235, 235);
+   
+}
+.prezentare-250 a:hover img{
+    display: block;
+}
+@media (max-width:768px){
+    .Descriere4 img{
+        width:15%;
+        top:32%;
+        left:50%;
+        transform: translate(-50%,-50%);
+    }
+    .Descriere4 h3{
+        font-size:.5rem;
+    }
+    .Descriere4 p{
+        font-size:.5rem;
+    }
+    .prezentare-250 p{
+        bottom:10%;
+        border-left: 4px solid black;
+        right:30%;
+        text-align: center;
+    }
+    .prezentare-250 p img{
+        width:90%;
+        position: relative;
+        box-shadow: none;
+        left:5%;
+        transform: translate(0,0);
+    }
+}
+
+/* Rémy Martin Cellar Selection No 28 */
+
+.Fundal-5{
+    background-image:
+    url('black\ bk.jpg');
+    height:100vh;
+    width: 100%;
+    background-size:cover;
+    background-position: center;
+}
+.Descriere5 h3{
+    font-size: 1vw;
+    color:rgb(255, 255, 255);
+    text-shadow: -15px 20px 3px rgba(0, 0, 0);
+    display: inline-block;
+    position:absolute;
+    top:25%;
+    left:80%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.Descriere5 p{
+    font-size:.9vw;
+    width:35%;
+    position: absolute;
+    display:inline-block;
+    top:58%;
+    left:80%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    border-bottom: 5px solid rgb(8, 8, 8);
+    padding-bottom: 2%;
+    text-shadow: -15px 20px 3px rgba(0, 0, 0);
+}
+.Descriere5 img{
+    width: 25%;
+    box-shadow:5px 10px 25px 10px rgb(8, 8, 8);
+    position: absolute;
+    top:15%;
+    left:10%;
+}
+.Descriere5 img:nth-child(2){
+    position:absolute ;
+    width:20%;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    box-shadow:5px 10px 25px 10px rgb(8, 8, 8);
+    border-left:5px solid rgb(8, 8, 8);
+    border-right:5px solid rgb(8, 8, 8);
+    padding:1% 2% 1% 2%;
+}
+@media (max-width:768px){
+    .Descriere5 h3{
+        font-size:.5rem;
+        top:5%;
+        left:50%;
+        transform: translate(-50%,-50%);
+    }
+    .Descriere5 p{
+        font-size: .3em;
+        width:60%;
+        top:80%;
+        left:50%;
+        transform: translate(-50%,-50%);
+    }
+    .Descriere5 img{
+        width:7em;
+        top:22%;
+        left:50%;
+        transform: translate(-50%,-50%);
+    }
+    .Descriere5 img:nth-child(2){
+        width:15rem;
+        top:48%;
+        left:50%;
+        transform: translate(-50%,-50%);
+    }
+}
+
+/* Rémy Martin Centaure Extra Old */
+
+.Fundal-6{
+    background-image:linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),
+    url('bk-centaure.jpg');
+    height:100vh;
+    width: 100%;
+    background-size:cover;
+    background-position: bottom;
+}
+.Descriere6 img{
+    width:20%;
+    position: absolute;
+    left:5%;
+    top:25%;
+    border:2px solid rgb(83, 83, 83);
+    box-shadow:5px 10px 25px 10px rgb(8, 8, 8);
+}
+.Descriere6 p{
+    font-size:1vw;
+    position: absolute;
+    bottom:2%;
+    margin:0 1% 0 1%;
+    text-align: center;
+    padding:.2%;
+    border-radius: 5%;
+    box-shadow:5px 10px 25px 10px rgb(8, 8, 8);
+    -webkit-box-shadow: inset 14px 11px 116px -19px rgba(78, 20, 2, 0.92);
+    -moz-box-shadow: inset 14px 11px 116px -19px rgba(78, 20, 2, 0.92);
+    box-shadow: inset 14px 11px 116px -19px rgba(78, 20, 2, 0.92);
+}
+.Descriere6 .Tasting{
+    position: absolute;
+    right: 10%;
+    top:40%;
+}
+.Descriere6 .dropdown-content-tasting p{
+    width: 150%;
+    position: absolute;
+    left:-170%;
+    transform: translate(0,50%);
+    text-align:left;
+    font-size: 1vw;
+    padding:5%;
+    border-left:4px solid black;
+    border-radius: 5%;
+    -webkit-box-shadow: inset 14px 11px 116px -19px rgba(78, 20, 2, 0.92);
+    -moz-box-shadow: inset 14px 11px 116px -19px rgba(78, 20, 2, 0.92);
+    box-shadow: inset 14px 11px 116px -19px rgba(78, 20, 2, 0.92);
+}
+.Descriere6 .dropdown-content-tasting{
+    display: none;  
+}
+
+.Descriere6 .dropdown-tasting:hover .dropdown-content-tasting {
+    display:block;
+}
+.Descriere6 .dropdown-tasting button {
+    background-image: linear-gradient(45deg,#020103,#130400,#970000,#4d1202,#be3009);
+    background-size:250%;
+    background-position:left;
+    padding:5% 20% 5% 20%;   
+    transition:background-position 1s; 
+    border:1px solid #4d1202;
+    border-radius: 20%;
+}
+.dropdown-tasting button:hover,
+.dropdown-tasting button:focus{
+    background-position:right;
+}
+@media (max-width:768px){
+    .Descriere6 img{
+        width:12em;
+        left:50%;
+        transform: translate(-50%,-50%);
+    }
+    .Descriere6 p{
+        font-size:.6em;
+    }
+    .Descriere6 .Tasting{
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+    .Descriere6 .dropdown-content-tasting p{
+        font-size: .5rem;
+        left:50%;
+        transform: translate(-50%,120%);
+    }
+    .Descriere6 button {
+        font-size: .5em;
+    }
+}
+
+/* Rémy Martin XO Christmas 2020 Limited Edition */
+.Fundal-7{
+    background-image:linear-gradient(rgba(0, 0, 0, 0.35),rgba(0, 0, 0, 0.35)),
+    url('bk-remyXo.jpg');
+    height:100vh;
+    width: 100%;
+    background-size:cover;
+    background-position: center;
+}
+@keyframes bordura{
+    0%{
+        border-bottom: 5px solid black;
+        border-left: 5px solid black;
+    }
+    25%{
+        border-bottom: 5px solid rgba(0, 0, 0, 0.5);
+        border-left: 5px solid rgba(0, 0, 0, 0.5);
+    }
+    50%{
+        border-bottom: 5px solid rgba(0, 0, 0, 0);
+        border-left: 5px solid rgba(0, 0, 0, 0); 
+    }
+    75%{
+        border-bottom: 5px solid rgba(0, 0, 0, 0.5);
+        border-left: 5px solid rgba(0, 0, 0, 0.5);
+    }
+    100%{
+        border-bottom: 5px solid black;
+        border-left: 5px solid black;
+        
+    }
+}
+@keyframes bordura1{
+    0%{
+        border-bottom: 5px solid black;
+        border-right: 5px solid black;
+    }
+    25%{
+        border-bottom: 5px solid rgba(0, 0, 0, 0.5);
+        border-right: 5px solid rgba(0, 0, 0, 0.5);
+    }
+    50%{
+        border-bottom: 5px solid rgba(0, 0, 0, 0);
+        border-right: 5px solid rgba(0, 0, 0, 0); 
+    }
+    75%{
+        border-bottom: 5px solid rgba(0, 0, 0, 0.5);
+        border-right: 5px solid rgba(0, 0, 0, 0.5);
+    }
+    100%{
+        border-bottom: 5px solid black;
+        border-right: 5px solid black;
+        
+    }
+}
+.imagini :nth-child(1){
+    width: 17%;
+    position: relative;
+    margin-top:2%;
+    float:left;
+    border-bottom: 5px solid black;
+    border-left: 5px solid black;
+    margin-left: 0.5%;
+    animation:bordura 5s ease-in-out infinite;
+}
+.imagini :nth-child(2){
+    width:19%;
+    float:right;
+    border-bottom: 5px solid black;
+    border-right: 5px solid black;
+    margin-right: 0.5%;
+    animation:bordura1 5s ease-in-out infinite;
+}
+.Descriere7 p{
+    font-size:.9vw;
+    display:block;
+    padding-top:6%;
+    color:black;
+    text-shadow: 1px -7px 3px rgb(78, 78, 78);
+    text-align: center;
+}
+.Descriere7 p a{
+    text-decoration: none;
+    color:rgb(114, 71, 7);
+    font-size:1vw;
+}
+.Descriere7 p a img{
+    position: absolute;
+    top:70%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    display: none;
+    text-decoration: none;
+    border:3px solid black;
+    -webkit-box-shadow: -1px -23px 48px -3px rgba(0,0,0,0.75);
+    -moz-box-shadow: -1px -23px 48px -3px rgba(0,0,0,0.75);
+    box-shadow: -1px -23px 48px -3px rgba(0,0,0,0.75);
+}
+.Descriere7 p a:hover img{
+    display: block;
+}
+@media (max-width:768px){
+    .Descriere7 p{
+        font-size: .6em;
+    }
+    .Descriere7 p a{
+        font-size: 1em;
+    }
+    .imagini :nth-child(1){
+        width: 32%;
+        border-bottom: 2px solid black;
+        border-left: 2px solid black;
+    }
+    .imagini :nth-child(2){
+        width: 32%;
+        border-bottom: 2px solid black;
+        border-right: 2px solid black;
+    }
+    
+}
+
+
+/* Rémy Martin XO Excellence */
+
+.Fundal-8{
+    background-image:linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),
+    url('excellence_lb.png');
+    height:100vh;
+    width: 100%;
+    background-size:cover;
+    background-position: center;
+}
+.Descriere8{
+    font-size: .8em;
+    width:30%;
+    position: relative;
+    top:30%;
+    left:10%;
+}
+.Descriere8 p{
+    color:wheat;
+}
+.circle{
+    border:5px solid rgb(134, 49, 0);
+    background-color:rgba(59, 19, 0, 0.2);
+    position:absolute;
+    border-radius: 50%;
+    width: 150%;
+    height: 150%;
+    top:-25%;
+    box-shadow: -1px -23px 48px -3px rgba(77, 22, 0, 0.836);
+    left:-28%;
+}
+.Fundal-8 img{
+    position:absolute;
+    top:25%;
+    right:5%;
+    overflow:hidden;
+}
+@media (max-width:768px){
+    .Descriere8{
+        width:70%;
+        position: relative;
+        top:25%;
+        left:51.5%;
+        transform: translate(-50%,-50%);
+    }
+    .Descriere8 p{
+        font-size:.7rem;
+    }
+    .Fundal-8 img{
+        width:9rem;
+        display: block;
+        top: 75%;
+        left:50%;
+        transform: translate(-50%,-50%);
+    }
+}
+
+
+/* Rémy Martin XO Cannes 2017 Exclusive Limited Edition Cognac */
+
+.Fundal-9{
+    background-image:linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),
+    url('black-wallpaper-20072315083911920x1080.jpg');
+    height:100vh;
+    width: 100%;
+    background-size:cover;
+    background-position: center;
+}
+.Fundal-9 img{
+    width:35%;
+    position: relative;
+    top:11%;
+    right:6%;
+    float:right;
+    border:6px solid rgb(32, 32, 32);
+    box-shadow: -15px 27px 32px 4px rgba(192, 192, 192, 0.5);
+}
+.Descriere9{
+    background:rgb(32, 32, 32);
+    box-shadow: -15px 27px 32px 4px rgba(192, 192, 192, 0.5);
+    border:6px solid rgb(179, 179, 179);
+    width:50%;
+    position:relative; 
+    top:11%;
+    left:6%;
+    padding:1%;
+}
+.Descriere9 p{
+    font-size: 0.9vw;
+}
+.Descriere9 p a{
+    color:rgb(124, 124, 124);
+}
+.Descriere9 p a img {
+    width:50%;
+    position: absolute;
+    display: none;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,50%);
+    border:5px solid rgb(32, 32, 32);
+}
+.Descriere9 p a:hover img {
+    display: block; 
+}
+
+@media (max-width:768px){
+    .Fundal-9 img{
+        border:2px solid rgb(32, 32, 32);
+        width:40%;
+        top:25%;
+        left:0%;
+        transform: translate(-75%,-50%);
+    }
+    .Descriere9{
+        width: 80%;
+        height:25vh;
+        overflow: auto;
+        top:50%;
+        left:50%;
+        transform: translate(-50%,-100%);
+    }
+    .Descriere9 p{
+        font-size: .8rem;
+        text-align: center;
+    }
+}
+
+.dropdown {
+    height: 20%;
+}
+.dropdown .cocktailuri{
+    position:relative;
+    width:100%;
+    margin-top:760%;
+    transform: translate(-130%,0);
+}
+.dropdown .cocktailuri .dropdown-content{
+    width:400%;
+    display:inline-block;
+    overflow: none;
+    position: absolute;
+    left:300%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    text-align: left;
+    display: none;
+    border-radius: 8%;
+    border: 3px solid #0F2027;
+    padding:10% 0 10% 0;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.dropdown:hover .cocktailuri .dropdown-content{
+    display: block;
+}
+.dropdown .cocktailuri .dropdown-content button{
+    width:100%;
+    font-size: .9rem;
+}
+.dropdown .cocktailuri .dropdown-content img{
+    width: 35%;
+    position: absolute;
+    left:42%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    overflow:auto;
+    border-radius: 20%;
+    box-shadow:0px 10px 10px 0px rgba(211, 211, 211, 0.3);
+    border: 2px solid #203A43;
+}
+.dropdown .cc .dropdown-content-cocktail{
+    display: none;
+}
+.dropdown .cc:hover .dropdown-content-cocktail{
+    display: block;
+}
+.dropdown .cocktailuri .dropdown-content p{
+    position: absolute;
+    width:35%;
+    box-shadow:0px 10px 10px 0px rgba(0, 0, 0, 0.87);
+    padding:2%;
+    border-radius: 10%;
+    left:80%;
+    font-size:.9rem;
+    text-align: left;
+    top:50%;
+    border:2px solid #2C5364;
+    transform: translate(-50%,-50%);
+    
+}
+.cc{
+    padding-left:2%;
+    padding-top:2%;
+    width:21%;
+}
+.dropdown-content .cc{
+    background-size:200%;
+    background-position:left;
+    transition:background-position 2s; 
+    display:block;
+    color:#cccccc;
+    text-decoration:none;
+}
+
+.dropdown-content .cc::after{
+    content:"";
+    display: block;
+    width:0;
+    height: 4px;
+    background:#cccccc;
+    transition: width 1s;
+    border-radius: 30%;
+}
+.dropdown-content .cc:hover::after {
+    width: 100%;
+}
+
+.dropdown-details{
+    display: inline-block;
+    width:5%;
+    text-align: center;
+    position: absolute;
+    right:3%;
+    bottom:-52%;
+}
+.dropdown-content-details{
+    display: none;
+    position: absolute;
+    left:-5%;
+    top:50%;
+    transform: translate(-100%,-50%);
+    box-shadow:0px 10px 10px 0px rgba(0, 0, 0, 0.87);
+    width:300%;
+    text-align: left;
+    padding:15% 5% 15% 30%;
+    border:2px solid #2C5364;
+    border-radius: 20%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.dropdown-content-details p{
+    font-size: .9rem;
+}
+.dropdown-details:hover  .dropdown-content-details{
+    display: block;
+}
+.dropdown-details button , .dropdown-link button{
+    border:none;
+    background-image:linear-gradient(145deg,#091114,#0F2027,#203A43,#2C5364);
+    box-shadow:0px 5px 10px 0px #707070;
+    padding:3% 5% 3% 5%;
+    border-radius: 0.7em;
+    color:#cccccc;
+    background-size:200%;
+    background-position:left;
+    transition:background-position 1.3s;
+    width:100%;
+    font-size:1.3em;
+}
+.dropdown-details button:hover,
+.dropdown-details button:focus{
+    background-position:right;
+}
+.dropdown-link{
+    display: inline-block;
+    width:5%;
+    text-align: center;
+    position: absolute;
+    right:50%;
+    bottom:-95%;
+}
+.dropdown-content-link{
+    display:none;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-109%);
+    border:2px solid #2C5364;
+    border-radius: 20%;
+    box-shadow:0px 10px 10px 0px rgba(0, 0, 0, 0.87);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.dropdown-link:hover .dropdown-content-link{
+    display: block;
+}
+.dropdown-link button:hover,
+.dropdown-link button:focus{
+    background-position:right;
+}
+.dropdown-link button{
+    font-size: 1.1rem;
+}
+
+
+                   /*                  HTML            */
+
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/f06f0ddbee.js" crossorigin="anonymous"></script>
+
+    <title>Competente profesionale</title>
+</head>
+<body>
+    <div class="Pagina">
+        <img src="logo.png" class="logo">
+        <nav>
+                <div class="dropdown">
+                    <div class="Bottlings">
+                    <button>Bottlings</button>
+                    <div class="dropdown-content">
+                        <a class="bottle1" href="Rémy-Martin-Louis-XIII.html">Rémy Martin Louis XIII</a>
+                        <a class="bottle2" href="Rémy-Martin-Louis-XIII-Black-Pearl-40°-70C.html">Rémy Martin Louis XIII Black Pearl 40° 70C</a>
+                        <a class="bottle3" href="Time-Collection.html">Rémy Martin Louis XIII Time Collection</a>
+                        <a class="bottle4" href="Rémy-Martin-250th-Anniversary.html">Rémy Martin 250th Anniversary </a>
+                        <a class="bottle5" href="Rémy-Martin-Cellar-Selection-No28.html">Rémy Martin Cellar Selection No 28</a>
+                        <a class="bottle6" href="Rémy-Martin-Centaure-Extra-Old.html">Rémy Martin Centaure Extra Old</a>
+                        <a class="bottle7" href="Rémy-Martin-XO-Christmas-2020-Limited-Edition.html">Rémy Martin XO Christmas 2020 Limited Edition</a>
+                        <a class="bottle8" href="Rémy-Martin-XO-Excellence.html">Rémy Martin XO Excellence</a>
+                        <a class="bottle9" href="Rémy-Martin-XO-Cannes-2017-Exclusive-Limited-Edition-Cognac.html">Rémy Martin XO Cannes 2017 Exclusive Limited Edition Cognac</a>
+                    </div>
+                    </div>
+                </div>
+            
+                <div class="dropdown">
+                    <div class="history">
+                    <button>History</button>
+                    <div class="dropdown-content">
+                        <p>Numele Rémy Martin provine de la numele fondatorului 
+                            companiei, născut în 1695 lângă Rouillac, în sud-vestul
+                            Franței. Vinicultor de meserie, în 1724 a creat o casă 
+                            de comerț de coniac. După moartea sa în 1773, nepotul 
+                            său, pe nume Rémy, a continuat afacerea. În 1841, 
+                            Paul-Emile-Rémy Martin a preluat controlul afacerii și
+                            a supravegheat o mare creștere. El a adăugat un logo 
+                            în sticle și cutii, în formă de centaur, o creatură 
+                            mitologică reprezentând Săgetătorul, semnul zodiacal 
+                            al lui Martin. Brandul Rémy Martin folosește un logo cu un
+                            centaur ce în China este numit și réntóumă
+                            (人头马), literalmente „cal cu cap de om”.
+                            În perioada interbelică, André Renaud, un avocat și 
+                            comerciant instruit, care fusese partener cu
+                            E.Rémy Martin & Co. din 1910, a preluat conducerea 
+                            și în 1927 a lansat prima șampanie fină VSOP. 
+                            Coniacurile Rémy Martin au fost apoi vândute în toată 
+                            lumea. După cel de-al doilea război mondial, Rémy Martin
+                            și-a continuat ascensiunea sub conducerea lui 
+                            André Hériard-Dubreuil, ginerele lui André Renaud. La 
+                            moartea lui André Renaud în 1965, André Hériard-Dubreuil
+                            a devenit președinte. Copiii săi i s-au alăturat
+                            treptat, în special fiica sa Dominique Hériard-Dubreuil, 
+                            care a devenit director general în 1988 și președinte doi
+                            ani mai târziu. În 1991, Casa Rémy Martin a încorporat-o
+                            pe Rémy Cointreau în grupul familiei.</p>
+                    </div>
+                </div>
+                </div>
+                
+                <div class="dropdown">
+                    <div class="Pricing">
+                    <button>Pricing</button>
+                    <div class="dropdown-content">
+                        <a href="https://www.cognac-expert.com/hors-d-age-cognac/louis-xiii-by-remy-martin-cognac">Rémy Martin Louis XIII <br>€ 4.090</a>
+                        <a href="https://www.winepalacemontecarlo.com/en/cognac-/110-louis-xiii-cognac-remy-martin.html">Rémy Martin Louis XIII Black Pearl 40° 70C<br>€ 28.800</a>
+                        <a href="https://www.cognac-expert.com/hors-d-age-cognac/remy-martin-louis-xiii-time-collection-cognac">Rémy Martin Louis XIII Time Collection <br>€ 7.915</a>
+                        <a href="https://www.cognac-expert.com/cognac-auction/remy-martin-250th-anniversary-cognac-1227">Rémy Martin 250th Anniversary <br> € 1.520 </a>
+                        <a href="https://www.cognac-expert.com/xo-cognac/remy-martin-cellar-selection-no-28-cognac">Rémy Martin Cellar Selection No 28 <br>€ 199</a>
+                        <a href="https://www.cognac-expert.com/extra-cognac/remy-martin-centaure-extra-old-cognac">Rémy Martin Centaure Extra Old <br> € 216</a>
+                        <a href="https://www.cognac-expert.com/xo-cognac/remy-martin-xo-christmas-2020-limited-edition-cognac">Rémy Martin XO Christmas 2020 Limited Edition<br> € 260</a>
+                        <a href="https://www.cognac-expert.com/xo-cognac/remy-martin-xo-cognac-excellence">Rémy Martin XO Excellence<br> € 234</a>
+                        <a href="https://www.cognac-expert.com/xo-cognac/remy-martin-xo-cannes-2017-cognac">Rémy Martin XO Cannes 2017 Exclusive Limited Edition Cognac<br>€ 299</a>
+                    </div>
+                    </div>
+                </div>
+        </nav>
+        <div class="dropdown">
+            <div class="cocktailuri">
+            <button>Cocktails</button>
+            <div class="dropdown-content">
+                <div class="cc">
+                    <button>Rémy sidecar</button>
+                    <div class="dropdown-content-cocktail">
+                        <img src="sidecar.jpg">
+                        <p>-30 ml Rémy Martin 1738 Accord Royal
+                            <br>
+                            -20 ml Cointreau
+                            <br>
+                            -10 ml suc de lamaie</p>
+                    </div>
+                </div>
+                <div class="cc">
+                        <button>Rémy old fashioned</button>
+                        <div class="dropdown-content-cocktail">
+                            <img src="old.jpg">
+                            <p>-50 ml Rémy Martin XO
+                                <br>
+                                -1 bulgăre de zahăr brun
+                                <br>
+                                -3 stropi de Bitter</p>
+                </div>
+                </div>    
+                <div class="cc">
+                    <button>Rémy ginger</button>
+                    <div class="dropdown-content-cocktail">
+                        <img src="ginger.jpg">
+                        <p>-50 ml Rémy Martin VSOP
+                            <br>
+                            -Top cu ginger ale
+                            <br>
+                            -Angostura bitters
+                            <br>
+                            -Roțiu de lămâie</p>
+                 </div>
+                </div>
+                 <div class="cc">
+                    <button>Rémy Iced Tea Club</button>
+                    <div class="dropdown-content-cocktail">
+                        <img src="iced.jpg">
+                        <p>-45 ml Rémy Martin Club
+                            <br>
+                            -7,5 ml Cointreau
+                            <br>
+                            -Acoperiți cu ceai cu aromă de piersici sau mango</p>
+                </div>
+                </div>
+                <div class="cc">
+                    <button>Rémy Mint Julep</button>
+                    <div class="dropdown-content-cocktail">
+                        <img src="mint.jpg">
+                        <p>-60 ml Rémy Martin VSOP
+                            <br>
+                            -8 crengute de menta
+                            <br>
+                            -15 ml sirop simplu
+                            <br>
+                            -Gheață rasa</p>
+                </div>
+                </div>
+                <div class="cc">
+                    <button>Rémy collins</button>
+                    <div class="dropdown-content-cocktail">
+                        <img src="collins.jpg">
+                        <p>-45 ml Rémy Martin 1738 Accord Royal
+                            <br>
+                            -20 ml suc de lamaie
+                            <br>
+                            -20 ml sirop simplu
+                            <br>
+                            -Top cu sifon de club
+                            <br>
+                            -Roata de lamaie
+                            <br>
+                            -Cireș cu brandied</p>
+                </div>
+                </div>      
+            </div>
+        </div>
+        </div>
+        <div class="text">
+           <div class="content">
+                <p><strong>Rémy Martin</strong> este o firmă franceză care produce<br> și vinde în principal coniac.
+                Fondat în 1724 și cu sediul în <strong>Cognac</strong>,<br> este unul dintre cei mai mari producători de coniac și face parte,de<br> asemenea, 
+                din<i><a href="https://www.comitecolbert.com/"> Comité Colbert</a></i>, o asociație
+                 „pentru promovarea conceptului de lux”.</p>
+            </div>
+        </div>
+        <div class="dropdown-details">
+            <div class="Details">
+            <button><<<</button>
+            <div class="dropdown-content-details">
+                <p>
+                    Nume: Stefu
+                    <br>
+                    Prenume: Alexandru-Marian 
+                    <br>
+                    Clasa: 12A
+                    <br>
+                    Scoala: Colegiul Economic "Ion Ghica" Bacau
+                    <br>
+                    Profesor coordonator: Marciuc Stela 
+                    <br>
+                    Nume-Proiect: Coniacurile Rémy Martin
+                </p>
+        </div>
+        </div>
+        </div>
+        <div class="dropdown-link">
+            <div class="Linkuri">
+            <button>^^^</button>
+            <div class="dropdown-content-link">
+                <p>
+                    https://www.cognac-expert.com/
+                    <br>
+                    https://www.finestore.ro/
+                    <br>
+                    https://www.remymartin.com/
+                    <br>
+                    https://specialdrinks.ro/
+                    <br>
+                    https://ro.wikipedia.org/wiki/R%C3%A9my_Martin
+                    <br>
+                    https://www.beicevrei.ro/
+                    <br>
+                    https://www.winepalacemontecarlo.com/en/
+                    <br>
+                    https://www.louisxiii-cognac.com/en-us/
+                    <br>
+                    https://www.wine-searcher.com/
+                    
+                </p>
+        </div>
+        </div>
+        </div>
+
+    </div>
+</body>
+</html> 
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <title>Rémy Martin Louis XIII Time Collection</title>
+</head>
+<body>
+    <div class="Fundal-3">
+        <div class="Descriere3">
+            <p>
+                <b>Louis XIII Time Collection</b> este prima lansare din colecția Time a lui Rémy Martin 
+                - fiecare lansare va prezenta o anumită piatră de hotar în istoria coniacului Louis XIII.
+                Pune în lumină viziunile lui Paul-Émile Rémy Martin pentru decantoarele distinctive,
+                decantoarele Ludovic al XIII-lea, inspirate de un balon regal antic descoperit pe un câmp 
+                de lângă Jarnac. Coniacul din acest decantor uimitor este un amestec creat din până la 1.200 
+                eaux-de-vie din regiunea Grande Champagne.
+                Etosul lui Remy din spatele colecției este că faimosul coniac Louis XIII a 
+                fost martor la multe evenimente semnificative din istoria lui Remy Martin.
+                De exemplu, în 1900 a câștigat premii la Târgul Mondial de la Paris. 1929 l-a văzut la bordul 
+                legendarului tren Orient Express. În 1939 a fost folosit pentru inaugurarea S.S. 
+                Normandie. În 1938, a fost folosit pentru a sărbători vizita regelui George al VI-lea 
+                și a reginei Elisabeta la Versailles. 1944 a văzut eliberarea Franței cu Charles de Gaulle, 
+                iar 1984 a văzut-o la bordul Concorde, întrerupând viteza sunetului...
+            </p>
+        </div>
+        <div class="sageata">
+            <img src='arrow.png'>
+        </div>
+        <div class="arrow-text">
+            <p>Decantorul este realizat din cristal pur Saint-Louis,
+                cu 13 vârfuri dentelle și un dop unic sub forma unui decantor răsturnat.
+                Sigiliul gâtului și al gulerului sunt într-o nuanță auriu-șampanie, 
+                iar decantorul în sine este găzduit într-o carcasă metalică elegantă.
+                Acesta prezintă o textură țesătă elegantă care reprezintă coșurile de 
+                răchită în care au fost livrate sticlele originale de Louis XIII Cogancs.</p>
+        </div>
+        <div class="coin">
+            <img  src="time-collection-img.jpg">
+        </div>
+        </div>
+        <div class="video-player">
+            <video width="100%" controls autoplay>
+                <source src="time-collection video.mp4">
+            </video>
+        </div>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <title>Rémy Martin XO Excellence</title>
+</head>
+<body>
+    <div class="Fundal-8">
+            <div class="Descriere8">
+                <p>
+                    Strugurii din care este obtinut acest cognac provin din zona Champagne, din inima regiunii Cognac, 
+                    85% din zona Grande Champagne, 15% din zona Petite Champagne.
+                    <br>
+                    Remy Martin XO este un amestec de arome opulente si textura de catifea cu note bogate si onctuoase de 
+                    smochine, prune si iasomie.
+                    <br>
+                    <B>Culoare</B>: Mahon
+                    <br>
+                    <B> Arome</B>: Arome de fructe coapte la sfarsit de vara – prune, smochine si portocale imbinate 
+                    cu note florale de iasomie si iris si note de scortisoara si alune
+                    <br>
+                    <B></B>Textura</B>: Catifelata
+                    <br>
+                    <B> Finish</B>: Bogat si persistent, catifelat.</p>
+                    <div class="circle"></div>
+            </div>
+            <img src="200w.gif">
+    </div>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <title>Rémy Martin XO Christmas 2020 Limited Edition</title>
+</head>
+<body>
+    <div class="Fundal-7">
+        <div class="imagini">
+            <img src="xoimg.png">
+            <img src="xoimg2.png">
+        </div>
+            <div class="Descriere7">
+                <p>Rémy Martin XO Crăciun 2020 Ediție limitată Cognac
+                    Un amestec de șampanie XO Fine de la Remy Martin
+                    Scopul acestui XO rafinat a fost de a aduce un omagiu excelenței
+                     eaux-de-vie din teritoriul Fine Champagne din regiunea Cognac.
+                      Maestrul de cramă <B><a href="#">Andre Giraud<img src="250px-André_Giraud_1987_(cropped).jpg"></a></B>
+                        a asamblat Cognacul Remy Martin XO
+                       în 1981, prezentând minunățiile aromelor bogate, lungi
+                        și luxoase.
+                         Aproximativ 85% din acest coniac este alcătuit din eaux-de-vie de
+                          la Grande Champagne, care este venerat în regiune datorită calității 
+                          unice a solului, și 15% din Petite Champagne. Compoziția e benefica pentru
+                          coniacuri foarte fine, care au lungime mare și un<B><a href="#"> rancio <img src="rancio.png"></a></B>rafinat. Fiind
+                           unul dintre cele mai emblematice coniacuri Extra Old, este compus din
+                            peste 400 de eaux-de-vie. O astfel de asamblare atentă indică structura
+                             aromatică extrem de complexă, care poate fi apreciată cu multe straturi 
+                             diferite. Ca un coniac Extra Old, unele dintre eaux-de-vie au fost învechite
+                              de peste 37 de ani. Este un coniac cu adevărat decadent, care este fin la gust,
+                           </p>
+        </div>
+    </div>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <title>Rémy Martin XO Cannes 2017 Exclusive Limited Edition Cognac</title>
+</head>
+<body>
+    <div class="Fundal-9">
+        <img src="remy-cannes.jpg">
+        <div class="Descriere9">
+            <p>Alcătuit din peste 400 de amestecuri diferite de eaux-de-vie,
+                Remy Martin XO Cannes 2017 Exclusive Limited Edition Cognac
+                oferă o încântare senzorială în continuă schimbare, care 
+                vă poartă într-o călătorie aromată și aromată de nuanțe dulci 
+                până la picante. Creat special pentru <a href="#">Festivalul de Film de la Cannes din 2017
+                <img src="Festivalul-de-Film-de-la-Cannes-2017.jpg"></a>, este un coniac care întruchipează luxul și glamour 
+                din interior spre exterior. Deoarece această sticlă a fost concepută
+                și produsă având în vedere festivalul de film exclusiv, această versiune 
+                a clasicului XO al mărcii este, desigur, pe piață ca o ediție limitată căutată
+                și ca obiect de colecție demn de un loc central printre altele cognac-uri amabile într-o colecție.</p>
+               
+        </div>
+    </div>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <title>Rémy Martin Louis XIII</title>
+</head>
+<body>
+    <div class="Fundal-1">
+            <div class="Descriere1">
+                <div class="box1">
+                    <h2><u>Descriere</u></h2>
+                    <p> Louis XIII este alcătuit din distilate rare învechite intre 40 și 100 de ani 
+                        , iar de-a lungul timpului a avut un loc special în inimile unora dintre cei
+                        mai faimoși oameni ai lumii, printre care Regele George al VI-lea , Regina
+                        Elisabeta,Winston Churchill sau Christian Dior.Botezat „lichiorul zeilor”
+                        de nimeni altul decât faimosul scriitor romantic francez, Victor Hugo, 
+                        coniacul a devenit cunoscut că un simbol al luxului francez. Atât de luxos,
+                        de fapt, încât utilizarea numelui de coniac este protejată de legislația
+                        franceză prin trei cerințe vitale: trebuie să fie făcut dintr-un anumit tip 
+                        de struguri, cum ar fi Ugni Blanc, trebuie distilat în alambicuri de cupru
+                        și să fie învechit în butoaie de stejar cel puțin doi ani.
+                        De ce numele de Louis XIII?
+                        Numele a fost ales in onoarea regelui Ludovic al XIII-lea al
+                        Frantei.Cand familia Rémy Martin si-a facut casa in regiunea
+                        Cognac in anii 1620 , a fost considerat un tribut
+                        protivit pentru barbatul care a recunoscut pentru prima data
+                        cognacul ca si pe un spirit de sine.
+
+                        Cum să savurați coniacul Louis XIII?
+                        Niciun alt produs de lux din lume nu are nevoie de 100 de ani pentru a fi 
+                        realizat. Ludovic al XIII-lea nu este băutura ta obișnuită, ci 
+                        ceva de savurat picătură cu picătură. Când bei coniac vechi de 
+                        100 de ani, bei istorie. Potrivit lui Pfützner, iată cum să 
+                        savurezi fiecare înghițitură de coniac Rémy Martin Louis XIII.
+                        Bea-l curat. Nu-l încălzi - bea-l între 16 și 18 grade Celsius
+                        pentru a capta cu adevărat complexitatea, intensitatea și 
+                        delicatețea aromelor și aromelor.Uita-te la ea
+                        Observați frumusețea culorii sale transparente de mahon. 
+                        Dă-i un vârtej și inhalează parfumul. Fiecare picătură de coniac 
+                        Louis XIII are peste 250 de arome și arome diferite. Pfützner 
+                        spune că ar trebui să culegeți arome florale, cum ar fi 
+                        trandafiri uscați, caprifoi și iasomie stea. Această notă este 
+                        urmată de alta, de fructe conservate precum prune și portocale,
+                        sau nuci și condimente.
+                        „Timpul este cea mai scumpă marfă din lume și totuși este egal în
+                        întreaga omenire”, spune Jörg Pfützner, director pentru clienți
+                        privați pentru Rémy Martin Louis XIII. „Minutul tău este 
+                        același timp ca și minutul meu. Dar ceea ce faci cu timpul
+                        face diferența.”
+                    </p>
+               </div>
+            </div>
+            <nav class="note">
+                <h2>Notele<br>Degustării</h2>
+                    <div class="dropdown-louisXIII">
+                        <div class="miros">
+                            <button>Miros</button>
+                                <div class="dropdown-content-louisXIII">
+                                    <p>Un buchet parfumat, unde se ghicesc note de caprifoi, pepene 
+                                        galben, piersică şi accente de marţipan.</p>
+                                </div>
+                        </div>
+                    </div>
+                    <div class="dropdown-louisXIII">
+                        <div class="gust">
+                            <button>Gust</button>
+                                <div class="dropdown-content-louisXIII">
+                                    <p>Valuri de arome captivante de migdale, piersică, scorţişoară şi flori 
+                                        de portocal, încununate cu influenţe de condimente lemnoase.</p>
+                                </div>
+                        </div>
+                    </div>
+                    <div class="dropdown-louisXIII">
+                        <div class="finish">
+                            <button>Finish</button>
+                                <div class="dropdown-content-louisXIII">
+                                    <p>Foarte lung, delicat, elegant, dulceag, dominat de note florale.</p>
+                                </div>
+                        </div>  
+                    </div>
+            </nav>
+    </div>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <title>Rémy Martin Louis XIII Black Pearl 40° 70C</title>
+</head>
+<body>
+    <div class="Fundal-2">
+        <div class="Descriere2">
+            <div class="box2">
+                <p>Pentru a sărbători cea de-a 140-a aniversare
+                    a lui Ludovic al XIII-lea , Casa Rémy Martin 
+                    lansat o ediție limitată de coniac numit Louis XIII
+                    Black Pearl Anniversay Edition,extras din pivnițele 
+                    private ale familiei Hériard Dubreuil.      
+                    Pentru creearea acestui coniac a fost nevoie de singurul 
+                    <a href="#">tierçon<img src="tierçon.png"></a>
+                     excepțional de 100 de ani ( tipul de butoi de stejar francez
+                    Limousin folosit pentru amestecarea și îmbătrânirea coniacului)
+                    Coniacul este făcut dintr-un amestec de eaux-de-vie 
+                    care sunt distilate din struguri cultivați în regiunea
+                    Grande Champagne din Cognac , Franța .Coniacul este amestecat
+                    în interiorul tierçon ,în fiecare an butoaie diferite de 
+                    diferite vârste sunt căsătorite împreună și apoi lăsate
+                    să îmbătrânească încă un an - un proces durează peste 
+                    100 de ani pentru a se finaliza. Coniacul final este un 
+                    amestec de peste 1200 de eaux-de-vie care au o vârstă de 
+                    până la 100 de ani.Louis XIII Black Pearl este îmbuteliată 
+                    într-un decantor Baccarat fascinant, placat cu straturi 
+                    subțiri de titan, carbon și aur care sunt stratificate
+                    unul peste altul. Procesul a fost conceput de Casă 
+                    Baccarat care amintește de <a href="#">balonul metalic<img src="balonul metalic.png"></a>
+                    care a fost găsit în 1850 pe locul bătăliei de la Jarnac 
+                    și a servit drept inspirație pentru sticlele emblematice
+                    Ludovic al XIII-lea.
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <title>Rémy Martin Centaure Extra Old</title>
+</head>
+<body>
+    <div class="Fundal-6">
+        <div class="Descriere6">
+            <img src="centaure extra-old.jpg">
+            <p>Rémy Martin Centaure Extra Old Cognac se încadrează în categoria Extra age. Un coniac neted și armonios, poate fi deosebit de greu de găsit în magazine, deoarece a fost produs inițial doar pentru piața chineză.
+
+                Amestecul constă din 25% Petite Champagne și 75% Grande Champagne - un adevărat coniac Fine Champagne. Există peste 300 de eaux-de-vie în amestecul Centaure (asta e mult) din cel puțin 20 de recolte diferite, unde cei mai tineri eaux-de-vie au cel puțin 6 ani. În medie, eaux-de-vie pentru acest coniac este învechit până la 25 de ani.
+                
+                Centaure de la Remy Martin este disponibil pentru cumpărare numai într-un magazin de băuturi alcoolice din magazinele din China continentală. 
+                
+                Cognacul Centaure a fost creat în 2011 de maestrul pivniței Pierre Trichet pentru a reflecta stilul casei: încrezător, dar natural, fără ostentație.</p>
+                <nav class="Tasting">
+                <div class="dropdown-tasting">
+                        <button>Tasting review</button>
+                            <div class="dropdown-content-tasting">
+                                <p>
+                                    <b>Culoare</b>: chihlimbar strălucitor.<br>
+
+                                   <b>Miros</b>: Arome de fructe fierte, plăcintă fierbinte cu mere și gutui, miere din florile albe de soc sau salcâm.
+                                        <br>
+                                   <b>Gust</b>: Note de miere si fructe, cu arome echilibrate, maturate la stejar. Un corp neted, armonios.</p>
+                            </div>
+                </div>
+                </nav>
+            </div>
+    </div>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <title>Rémy Martin Cellar Selection No28</title>
+</head>
+<body>
+    <div class="Fundal-5">
+        <div class="Descriere5">
+            <h3>O celebrare a pivnițelor, Remy Martin Cellar Selection No. 28 Cognac</h3>
+            <p>
+                Selecția Cramă de Remy Martin este o sărbătoare a diversității aromatice 
+                produse de diferitele pivnițe de la domeniul Domaine de Merpins din Cognac,
+                fiecare selecție reprezentând calitățile unei pivnițe la fața locului.
+                Lansat în 2013 de Pierrette Trichet, scopul a fost de a prezent
+                caracteristicile individuale ale fiecărei pivnițe și de a evidenția notele aromatice
+                specifice oferite de atmosfera lor unică. Acest XO special este un amestec Fine Champagne, 
+                care reunește cele mai fine părți ale terroirurilor Petite și Grande Champagne.
+                Pivnița nr. 28 este una deosebit de specială, deoarece depozitează unele dintre 
+                cele mai vechi butoaie de pe moșie, este poziționată adânc în subteran
+                pentru condiții optime de învechire și oferă multă umiditate și 
+                temperatura perfectă de maturare. Coniacul rezultat este mătăsos, 
+                neted, cu note intense de fructe confiate. Fiecare eau-de-vie a 
+                fost atent selectat pentru profilul său de aromă, asigurându-se că
+                prezintă aceleași arome și gust pentru a oferi potrivirea perfectă. 
+                Această selecție are ca rezultat o experiență de băut mai bogată și mai
+                definită pentru cunoscătorii de coniac suficient de norocoși să se bucure de amestecul său armonios.
+            </p>
+            <div class="imgceller">
+                <img src="no28.jpg">
+                <img src="pierrette.jpg">
+            </div>
+        </div>
+    </div>
+    </body>
+</html>
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <title>Rémy-Martin-250th-Anniversary</title>
+</head>
+<body>
+    <div class="Fundal-4">
+        <div class="Descriere4">
+            <img src="250anniversary.jpg">
+            <h3>Rémy Martin 250th Anniversary</h3>
+            <p>
+                O ediție specială limitată de la Rémy Martin, 
+                care sărbătorește cea de-a 250-a aniversare de la înființarea 
+                companiei în 1724. Un amestec de conicuri vechi și rare, despre 
+                care se spune că are între 80 și 100 de ani.
+            </p>
+            <div class="prezentare-250">
+            <p><a href="#">Rémy Martin 250th Anniversary<img src="250.jpg"></a> 1724-1974 este un amestec magnific de coniacuri 
+                învechite de la Remy Martin, asamblat special pentru a sărbători cea de-a 250-a
+                aniversare în 1974. Amestecul conține conicuri cu vârsta cuprinsă între 80 și 100 de ani. 
+                Cu toate acestea, s-a zvonit că există componente care datează încă din secolul al XVIII-lea și 
+                sunt livrate în cutia sa originală din lemn de prezentare.
+            </p>
+            </div>
+        </div>
+        <div class="cerc">
+        </div>
+    </div>
+</body>
+</html>
